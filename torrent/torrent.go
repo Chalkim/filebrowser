@@ -37,11 +37,6 @@ func (t *Torrent) MakeTorrent(file *files.FileInfo, body users.CreateTorrentBody
 
 	// 上传到 R2
 	if body.R2 {
-		// var bucketName = "moezakura"
-		// var accountId = "6a59886e546396fc9076ec50764dc9f3"
-		// var accessKeyId = "d65f9e3347d046e0583a8d846aa8cb46"
-		// var accessKeySecret = "a8a57f4d1525eada05f7e553815a89c4da0a3b28745eaddea89e4c52334f056e"
-
 		var accountId = t.Settings.Torrent.AccountId
 		var accessKeyId = t.Settings.Torrent.AccountKeyId
 		var accessKeySecret = t.Settings.Torrent.AccountKeySecret
